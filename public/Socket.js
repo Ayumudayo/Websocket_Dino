@@ -4,7 +4,7 @@ import Score from './Score.js';
 let userId = '';
 let scoreInstance = null;
 
-const socket = io.connect('http://localhost:3000', {
+const socket = io.connect('ec2-43-207-73-50.ap-northeast-1.compute.amazonaws.com:3000', {
     query: {
         clientVersion: CLIENT_VERSION,
         userId,
