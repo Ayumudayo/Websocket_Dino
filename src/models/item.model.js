@@ -15,6 +15,5 @@ export const addItem = (userId, item) => {
 
 // 유저의 아이템 획득 기록 조회
 export const getUserItems = (userId) => {
-    console.log('Get user items:', userItems[userId]);
     return userItems[userId] || [];
 };
