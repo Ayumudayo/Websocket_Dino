@@ -24,7 +24,7 @@ class Score {
         this.itemTable = itemTable;
         this.itemController = itemController;
 
-        // 모든 스테이지에 대해 stageChanged 초기화
+        // 모든 스테이지의 stageChanged 초기화
         this.stageTable.forEach((stage) => {
             this.stageChanged[stage.id] = false;
         });
@@ -58,11 +58,7 @@ class Score {
             const stage = this.stageTable[i];
 
             // 현재 점수가 스테이지 점수 이상이고, 해당 스테이지로 변경된 적이 없는 경우
-            if (
-                Math.floor(this.score) >= stage.score &&
-                !this.stageChanged[stage.id] &&
-                stage.id !== 1000
-            ) {
+            if (Math.floor(this.score) >= stage.score && !this.stageChanged[stage.id]) {
                 const previousStage = this.currentStage;
                 this.currentStage = stage.id;
 
